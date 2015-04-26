@@ -1,0 +1,5 @@
+{
+  "BT_PUBLIC_KEY": "<your_braintree_public_key>",
+  "BT_PRIVATE_KEY": "<your_braintree_private_key>",
+  "BT_MERCHANT_ID": "<your_braintree_merchant_id>"
+}

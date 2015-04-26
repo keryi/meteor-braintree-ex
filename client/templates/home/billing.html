@@ -1,0 +1,33 @@
+<template name='billing'>
+{{#if currentUser}}
+<h3>Billing</h3>
+  {{#unless isPaymentInProgress}}
+  <form class="form">
+    <div class="form-group">
+      <label for="cc_num" class="control-label">CC</label>
+      <input type="text" class="form-control" id="cc_num" placeholder="5555666677778888" />
+    </div>
+
+    <div class="form-group">
+      <label for="cc_cvv" class="control-label">CVV</label>
+      <input type="text" class="form-control" id="cc_cvv" placeholder="123" length="3" />
+    </div>
+
+    <div class="form-group">
+      <label for="cc_expiry" class="control-label">Expiry Date</label>
+      <input type="text" class="form-control" id="cc_expiry" placeholder="10/17" length="5" />
+    </div>
+
+    <div class="form-group">
+      <a href="#" id="cc_submit" class="btn btn-block btn-primary">Pay</a>
+    </div>
+  </form>
+  {{else}}
+  <div id="payment_in_progress">
+    <h3>Payment in progress...</h3>
+  </div>
+  {{/unless}}
+{{else}}
+<h3 class="text-center">Please login first!</h3>
+{{/if}}
+</template>
